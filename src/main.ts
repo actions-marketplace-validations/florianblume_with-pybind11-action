@@ -45,19 +45,6 @@ async function run() {
 
     const CMAKE_CXX_COMPILER = core.getInput('CMAKE_CXX_COMPILER')
     const CMAKE_INSTALL_PREFIX = core.getInput('CMAKE_INSTALL_PREFIX')
-    const WITH_TBB = core.getInput('WITH_TBB')
-    const WITH_IPP = core.getInput('WITH_IPP')
-    const BUILD_NEW_PYTHON_SUPPORT = core.getInput('BUILD_NEW_PYTHON_SUPPORT')
-    const WITH_V4L = core.getInput('WITH_V4L')
-    const ENABLE_PRECOMPILED_HEADERS = core.getInput(
-      'ENABLE_PRECOMPILED_HEADERS'
-    )
-    const INSTALL_C_EXAMPLES = core.getInput('INSTALL_C_EXAMPLES')
-    const INSTALL_PYTHON_EXAMPLES = core.getInput('INSTALL_PYTHON_EXAMPLES')
-    const BUILD_EXAMPLES = core.getInput('BUILD_EXAMPLES')
-    const WITH_QT = core.getInput('WITH_QT')
-    const WITH_OPENGL = core.getInput('WITH_OPENGL')
-    const GENERATE_PKGCONFIG = core.getInput('GENERATE_PKGCONFIG')
 
     if (cached) {
       core.startGroup('Install from cache')
