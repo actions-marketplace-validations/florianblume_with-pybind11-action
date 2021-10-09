@@ -57,7 +57,7 @@ async function run() {
       await exec.exec(`mkdir -p ${cachedDir}`)
 
       await exec.exec(
-        `git https://github.com/pybind/pybind11.git --branch v${version} --depth 1 ${cachedDir}/pybind11`
+        `git clone https://github.com/pybind/pybind11.git --branch v${version} --depth 1 ${cachedDir}/pybind11`
       )
 
       core.endGroup()

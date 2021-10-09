@@ -86,7 +86,7 @@ function run() {
             else {
                 core.startGroup('Download source code');
                 yield exec.exec(`mkdir -p ${cachedDir}`);
-                yield exec.exec(`git https://github.com/pybind/pybind11.git --branch v${version} --depth 1 ${cachedDir}/pybind11`);
+                yield exec.exec(`git clone https://github.com/pybind/pybind11.git --branch v${version} --depth 1 ${cachedDir}/pybind11`);
                 core.endGroup();
                 /* eslint-disable prefer-template */
                 const cmakeCmd = `cmake -S ${cachedDir}/pybind11 -B ${cachedDir}/pybind11/build ` +
