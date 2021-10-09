@@ -1,8 +1,8 @@
 {
-  "name": "with-opencv-action",
+  "name": "with-pybind11-action",
   "version": "0.0.0",
   "private": true,
-  "description": "Cacheable OpenCV installation on your Github Actions",
+  "description": "Cacheable Pybind11 installation on your Github Actions",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rayandrews/with-qt-action.git"
+    "url": "git+https://github.com/florianblume/with-pybind11-action.git"
   },
   "keywords": [
-    "opencv"
+    "pybind11"
   ],
   "author": "rayandrews",
   "license": "MIT",

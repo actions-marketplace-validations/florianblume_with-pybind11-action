@@ -17,19 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Cache OpenCV
-      id: opencv-cache
+    - name: Cache Pybind11
+      id: pybind11-cache
       uses: actions/cache@v2
       with:
-        path: opencv-install
-        key: ${{ runner.os }}-opencv-cache-${{ hashFiles('**/version.hpp') }}
-    - name: Install OpenCV
+        path: pybind11-install
+        key: ${{ runner.os }}-pybind11-cache-${{ hashFiles('**/version.hpp') }}
+    - name: Install Pybind11
       uses: ./
       with:
-        cached: ${{ steps.opencv-cache.outputs.cache-hit }}
-        dir: opencv-install
-        opencv-version: '4.0.0'
+        cached: ${{ steps.pybind11-cache.outputs.cache-hit }}
+        dir: pybind11-install
+        pybind11-version: '2.8.0'
     - name: Run tests
       run: |
-        cmake -Htests/basic_test -Btest -DCMAKE_BUILD_TYPE=Release
+        cmake -Htests/basic_test -Btest
         cmake --build test --config Release

@@ -1,11 +1,8 @@
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
+#include <pybind11/pybind11.h>
 #include <iostream>
 
 using namespace cv;
 
-int main( int argc, char** argv )
-{
-    Mat image;
+int main( int argc, char** argv ) {
     return 0;
 }

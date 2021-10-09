@@ -1,69 +1,25 @@
-name: 'With OpenCV'
-description: 'Cacheable OpenCV installation on your Github Actions'
-author: 'rayandrews'
+name: 'With Pybind11 Action'
+description: 'Cacheable Pybind11 installation from source for your Github Actions.'
+author: 'florianblume'
 branding:
   icon: 'scissors'
   color: 'gray-dark'
 inputs:
   dir:
-    description: 'Directory to clone OpenCV, required to cache path'
-    default: 'opencv-install'
+    description: 'Directory to clone Pybind11, required to cache path'
+    default: 'pybind11-install'
   cached:
-    description: "Whether to build OpenCV completely again or just run make install from previously built binaries."
+    description: "Whether to build Pybind11 completely again or just run make install from previously built binaries."
     default: false
-  opencv-version:
-    description: 'OpenCV version to be installed.'
+  pybind11-version:
+    description: 'Pybind11 version to be installed.'
     required: true
-    default: '4.0.0'
-  opencv-extra-modules:
-    description: 'If opencv-contrib (extra modules) should be included in the instalation.'
-    required: false
-    default: true
-  install-deps:
-    description: 'If dependencies should be installed as well.'
-    required: false
-    default: true
-  CMAKE_BUILD_TYPE:
-    required: false
-    default: RELEASE
+    default: '2.8.0'
   CMAKE_CXX_COMPILER:
     default: g++
     required: false
   CMAKE_INSTALL_PREFIX:
     default: /usr/local
-    required: false
-  WITH_TBB:
-    default: ON
-    required: false
-  WITH_IPP:
-    default: ON
-    required: false
-  BUILD_NEW_PYTHON_SUPPORT:
-    default: OFF
-    required: false
-  WITH_V4L:
-    default: OFF
-    required: false
-  ENABLE_PRECOMPILED_HEADERS:
-    default: ON
-    required: false
-  INSTALL_C_EXAMPLES:
-    default: OFF
-    required: false
-  INSTALL_PYTHON_EXAMPLES:
-    default: OFF
-    required: false
-  BUILD_EXAMPLES:
-    default: OFF
-    required: false
-  WITH_QT:
-    default: OFF
-    required: false
-  WITH_OPENGL:
-    default: OFF
-    required: false
-  GENERATE_PKGCONFIG:
-    default: OFF
     required: false
 runs:
   using: 'node12'
