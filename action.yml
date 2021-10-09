@@ -3,7 +3,7 @@ description: 'Cacheable Pybind11 installation from source for your Github Action
 author: 'florianblume'
 branding:
   icon: 'scissors'
-  color: 'gray-dark'
+  color: 'blue'
 inputs:
   dir:
     description: 'Directory to clone Pybind11, required to cache path'
